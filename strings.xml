@@ -1,0 +1,16 @@
+
+
+<!------------------------------- IMPORTANT ------------------------------->
+<!-- THIS IS JUST AN EXAMPLE, CLEAR THIS FILE BEFORE TO ADD YOUR STRINGS -->
+<!------------------------------------------------------------------------->
+
+<!-- android strings format -->
+<string name="key1">value1</strings>
+<string name="key2">value2</strings>
+<string name="key3">value3</strings>
+
+<!-- ios strings format -->
+"key1"="value1"
+"key2"="value2"
+"key3"="value3"
+
