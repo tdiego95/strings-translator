@@ -10,7 +10,7 @@
 <string name="key3">value3</strings>
 
 <!-- ios strings format -->
-"key1"="value1"
-"key2"="value2"
-"key3"="value3"
+"key1"="value1";
+"key2"="value2";
+"key3"="value3";
 
