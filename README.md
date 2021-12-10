@@ -1,5 +1,5 @@
 # strings-translator
-Python script which generates localizated strings for Android and iOS using google translate API.
+Python script which generates localizated strings for Android, iOS or just plain text using google translate API.
 
 # Usage
 
