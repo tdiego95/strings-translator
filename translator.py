@@ -33,6 +33,8 @@ def translate():
 				androidTranslate(text, lan)
 			elif (target == 'ios'):
 				iosTranslate(text, lan)
+			elif (target == 'plainText'):
+				plainTextTranslate(text, lan)
 
 def androidTranslate(text, lan):
 	translator = Translator()
@@ -47,6 +49,11 @@ def iosTranslate(text, lan):
 	value = text[text.find('="') + 2 : text.find('";')]
 	translated = translator.translate(value, src='en', dest=lan)
 	file.write(ios_string_format.format(key, translated.text) + '\n')
+
+def plainTextTranslate(text, lan):
+	translator = Translator()
+	translated = translator.translate(text, src='en', dest=lan)
+	file.write(translated.text + '\n')
 
 
 ###################
@@ -65,11 +72,14 @@ if arg == '-android':
 	target = arg[1:]
 elif arg == '-ios':
 	target = arg[1:]
+elif arg == '-plainText':
+	target = arg[1:]
 elif arg == '-h':
 	print('''
+-android        -android target. Strings format <string name="key">value</string>
+-ios		-ios target. Strings format "key"="value";
+-plainText      -plain text. No formats, just text.
 -h              -help
--android        -android target
--ios		-ios target
 		''')
 	sys.exit()
 else:
